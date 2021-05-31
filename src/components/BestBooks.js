@@ -32,11 +32,11 @@ class BestBooks extends React.Component {
     render() {
         return (
             <>
-                <Carousel width='400px'>
+                <Carousel  style={{ width: '400px' }}>
                     {this.state.bookData.length &&
                         this.state.bookData.map((item, idx) => {
                             return (
-                                <Carousel.Item interval={1000} width='400px'>
+                                <Carousel.Item interval={1000} >
                                     <img
                                         className="d-block w-100"
                                         src={item.url}
