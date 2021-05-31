@@ -1,4 +1,4 @@
-# # can-of-books-frontend
+# can-of-books-frontend
 
 **Author**: Yahia Qous, Abdelrahman Al Daour
 **Version**: 1.2.0 
