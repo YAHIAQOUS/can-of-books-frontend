@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { useAuth0, withAuth0 } from "@auth0/auth0-react";
+import { withAuth0 } from '@auth0/auth0-react';
 
 // const Profile = () => {
 //   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -21,22 +21,20 @@ import { useAuth0, withAuth0 } from "@auth0/auth0-react";
 
 class Profile extends Component {
   render() {
-    const { user, isAuthenticated } = this.props.auth0;
-    return (
-      <>
-        {
-          isAuthenticated &&
+      const { user, isAuthenticated } = this.props.auth0;
+      return (
           <>
-            <img src={user.picture} alt={user.name} />
-            <div>Hello {user.name}</div>
-            <div>Email {user.email}</div>
+              {
+                  isAuthenticated &&
+                  <>
+                      <img src={user.picture} alt="Me" />
+                      <div>Hello {user.name}</div>
+                      <div>Email {user.email}</div>
+                  </>
+              }
           </>
-        }
-      </>
-    )
+      )
   }
 }
-
-
 
 export default withAuth0(Profile);
