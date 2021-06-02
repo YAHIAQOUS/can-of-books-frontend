@@ -6,13 +6,15 @@ import BestBooks from './components/BestBooks'
 
 class MyFavoriteBooks extends React.Component {
   render() {
-    return(
+    return (
       <Jumbotron>
         <h1>My Favorite Books</h1>
         <p>
           This is a collection of my favorite books
         </p>
-        <BestBooks/>
+
+        <BestBooks />
+
       </Jumbotron>
     )
   }
