@@ -58,8 +58,8 @@ class AddBook extends React.Component {
             newStatus: this.state.newStatus,
         }
         // console.log(bookData);
-        // const newBook = await axios.post(`${process.env.REACT_APP_PORT}addbook`, bookData)
-        const newBook = await axios.post(`https://can-of-books301.herokuapp.com/addbook`, bookData)
+        const newBook = await axios.post(`${process.env.REACT_APP_PORT}addbook`, bookData)
+        // const newBook = await axios.post(`https://can-of-books301.herokuapp.com/addbook`, bookData)
 
         console.log(newBook.data.books);
         this.props.updateBookData(newBook.data.books);
